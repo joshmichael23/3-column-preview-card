@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root{
+    --bgcolor-bright-orange: hsl(31, 77%, 52%);
+    --bgcolor-dark-cyan: hsl(184, 100%, 22%);
+    --bgcolor-very-dark-cyan: hsl(179, 100%, 13%);
+
+/* Neutral */
+
+    --color-transparent-white: hsla(0, 0%, 100%, 0.75);
+    --color-very-light-gray: hsl(0, 0%, 95%);
+
+    --font-size: 15px;
+
+    --lexend-deca: "Lexend Deca";
+    --big-shoulders-display: "Big Shoulders Display"
+}
+
+
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    min-height: 100vh;
+    display:flex;
+    width: 100%;
+}
+
+body{
+    margin:0;
+    min-height: 100vh;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--font-size);
+    overflow: scroll;
+    font-size: 15px;
+}
+
+main{
+    overflow: hidden;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    display: grid;
+    height:fit-content;
+    width: 80%;
+    border-radius: 10px;
+}
+
+section{
+    display:flex;
+    flex-direction: column;
+    padding: 3em;
+}
+
+section.left{
+    background-color: var(--bgcolor-bright-orange);
+}
+
+section.middle{
+    background-color: var(--bgcolor-dark-cyan);
+}
+
+section.right{
+    background-color: var(--bgcolor-very-dark-cyan);
+}
+
+img{
+    object-fit: contain;
+    height: 25%;
+    width: 25%;
+}
+
+h1{
+    font-size: 2.5em;
+    line-height: 1;
+    color: var(--color-very-light-gray);
+    text-transform: uppercase;
+    font-weight:700;
+    font-family: var(--big-shoulders-display);
+}
+
+
+p{
+    line-height: 2em;
+    font-weight: 400;
+    color: var(--color-transparent-white);
+    font-family: var(--lexend-deca);
+}
+
+
+
+.learnmore{
+    border:none;
+    font-weight:400;
+    font-family: var(--lexend-deca);
+    border-radius: 25px;
+    padding: 1em 2em;
+    width: 140px;
+}
+
+.learnmore.yellow{
+    color: var(--bgcolor-bright-orange)
+}
+
+.learnmore.cyan{
+    color: var(--bgcolor-dark-cyan)
+}
+
+.learnmore.darkcyan{
+    color: var(--bgcolor-very-dark-cyan)
+}
+@media screen and (min-width: 300px){
+    main{
+
+   
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    section>p{
+        padding-right: 15px;
+    }
+
+    .learnmore{
+        margin-top: none;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    main{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    section>p{
+        padding-right: 20px;
+    }
+
+    .learnmore{
+        margin-top: 6em;
+    }
+}
